@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.shop {
+    padding: 20px;
+    text-align: center;
+}
+
+.tshirt-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tshirt {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.tshirt img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensures the image fits nicely */
+    display: block; /* Ensures the image renders as a block element */
+}
+
+.tshirt h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.tshirt p {
+    color: #555;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #28a745; /* Green color to match the screenshot */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838; /* Slightly darker green on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #
